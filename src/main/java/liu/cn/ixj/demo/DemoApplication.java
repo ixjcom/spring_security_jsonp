@@ -19,9 +19,10 @@ public class DemoApplication {
     }
 
 
-    @RequestMapping("aa")
+    @RequestMapping("/select/{name}/{callback}")
     @ResponseBody
-    public ArrayList<TestDemo> aa(){
+    public ArrayList<TestDemo> aa(Integer i){
+        System.out.println(10/i);
         System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
         ArrayList<TestDemo> testDemos = new ArrayList<>();
         testDemos.add(new TestDemo());
