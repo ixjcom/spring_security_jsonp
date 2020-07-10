@@ -8,10 +8,6 @@ import lombok.Setter;
 @Setter
 @Getter
 public class ResponseData {
-    public static final String DEFAULT_SUCCESS_MESSAGE = "请求成功";
-    public static final String DEFAULT_ERROR_MESSAGE = "网络异常";
-    public static final Integer DEFAULT_ERROR_CODE = 500;
-
     private Boolean success;
     private Integer code;
     private String message;
