@@ -13,6 +13,15 @@ import org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExc
 @ResponseBody
 public class GloabError extends ExceptionHandlerExceptionResolver {
 
+
+    @ExceptionHandler(ServiceException.class)
+    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+    public ResponseData responseData(ServiceException e){
+        return new ResponseData(false,CoreExceptionEnum.SERVICE_ERRPR_EXCEPTION.getCode(),CoreExceptionEnum.SERVICE_ERRPR_EXCEPTION.getMessage(),e.getMessage());
+
+    }
+
+
     @ExceptionHandler(Exception.class)
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     public ResponseData responseData(Exception e){

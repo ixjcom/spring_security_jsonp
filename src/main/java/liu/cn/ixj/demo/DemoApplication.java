@@ -19,7 +19,7 @@ public class DemoApplication {
     }
 
 
-    @RequestMapping("/select/{name}/{callback}")
+    @RequestMapping("/select/aaa")
     @ResponseBody
     public ArrayList<TestDemo> aa(Integer i){
         System.out.println(10/i);
@@ -30,7 +30,11 @@ public class DemoApplication {
         return testDemos;
     }
 
-
+    @RequestMapping("/select/bbb")
+    @ResponseBody
+    public ArrayList<TestDemo> bb(Integer i) throws ServiceException {
+        throw new ServiceException("这是一个测试异常");
+    }
 }
 class  TestDemo{
     private String name1="1";

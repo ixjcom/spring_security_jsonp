@@ -3,6 +3,7 @@ package liu.cn.ixj.demo;
 public enum  CoreExceptionEnum {
 
     SERVER_ERROR_500(500,"服务端异常"),
+    SERVICE_ERRPR_EXCEPTION(501,"服务层异常"),
     ;
 
     private int code;
