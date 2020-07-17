@@ -1,4 +1,4 @@
-package liu.cn.ixj.demo;
+package liu.cn.ixj.jsonp;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.serializer.SerializerFeature;

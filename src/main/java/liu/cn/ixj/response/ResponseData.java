@@ -1,4 +1,4 @@
-package liu.cn.ixj.demo;
+package liu.cn.ixj.response;
 
 import lombok.Data;
 import lombok.Getter;

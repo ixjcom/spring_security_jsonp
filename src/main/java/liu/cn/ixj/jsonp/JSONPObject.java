@@ -1,4 +1,4 @@
-package liu.cn.ixj.demo;
+package liu.cn.ixj.jsonp;
 
 import java.io.Serializable;
 

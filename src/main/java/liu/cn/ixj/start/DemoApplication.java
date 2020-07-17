@@ -1,5 +1,6 @@
-package liu.cn.ixj.demo;
+package liu.cn.ixj.start;
 
+import liu.cn.ixj.exceptions.ServiceException;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -9,7 +10,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.ArrayList;
 
-@SpringBootApplication(scanBasePackages = {"liu.cn.ixj.demo"})
+@SpringBootApplication(scanBasePackages = {"liu.cn.ixj.start"})
 @EnableWebSecurity
 @Controller
 public class DemoApplication {

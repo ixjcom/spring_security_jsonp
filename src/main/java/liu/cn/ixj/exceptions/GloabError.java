@@ -1,5 +1,7 @@
-package liu.cn.ixj.demo;
+package liu.cn.ixj.exceptions;
 
+import liu.cn.ixj.response.ResponseData;
+import liu.cn.ixj.enums.CoreExceptionEnum;
 import org.springframework.core.annotation.Order;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -17,7 +19,7 @@ public class GloabError extends ExceptionHandlerExceptionResolver {
     @ExceptionHandler(ServiceException.class)
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     public ResponseData responseData(ServiceException e){
-        return new ResponseData(false,CoreExceptionEnum.SERVICE_ERRPR_EXCEPTION.getCode(),CoreExceptionEnum.SERVICE_ERRPR_EXCEPTION.getMessage(),e.getMessage());
+        return new ResponseData(false, CoreExceptionEnum.SERVICE_ERRPR_EXCEPTION.getCode(),CoreExceptionEnum.SERVICE_ERRPR_EXCEPTION.getMessage(),e.getMessage());
 
     }
 
